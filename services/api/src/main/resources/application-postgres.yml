@@ -1,0 +1,12 @@
+app:
+  demo-mode: false
+
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/aishop}
+    username: ${DATABASE_USERNAME:aishop}
+    password: ${DATABASE_PASSWORD:aishop}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update

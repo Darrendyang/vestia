@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Vestia 3D Style Twin</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">
+    {"imports":{"three":"./three.module.js","three/addons/":"./addons/"}}
+  </script>
+</head>
+<body>
+  <main id="app">
+    <div id="viewer" aria-label="可旋转的 3D 数字人试穿"></div>
+    <header class="topbar">
+      <div><span class="eyebrow">STYLE TWIN · REAL-TIME 3D</span><h1>Mia<span>.</span></h1></div>
+      <div class="live"><i></i>3D 数字人</div>
+    </header>
+    <section class="info"><strong id="outfit-name">通勤风衣</strong><span>拖拽旋转 · 双指缩放 · 点击换装</span></section>
+    <div id="loading"><div class="loader-orb"></div><span>正在唤醒 3D 数字人…</span></div>
+    <section class="controls">
+      <div class="outfits" role="group" aria-label="服装选择">
+        <button class="outfit active" data-outfit="commute"><span class="swatch" style="--c:#b38a62"></span>通勤风衣</button>
+        <button class="outfit" data-outfit="casual"><span class="swatch" style="--c:#5879a8"></span>休闲上装</button>
+        <button class="outfit" data-outfit="date"><span class="swatch" style="--c:#b52e46"></span>礼服裙</button>
+      </div>
+      <div class="bottom-row">
+        <div class="colors" aria-label="服装颜色">
+          <button class="color active" data-color="#b38a62" style="--c:#b38a62" aria-label="卡其"></button>
+          <button class="color" data-color="#263d5b" style="--c:#263d5b" aria-label="深蓝"></button>
+          <button class="color" data-color="#b52e46" style="--c:#b52e46" aria-label="酒红"></button>
+          <button class="color" data-color="#e8e4dc" style="--c:#e8e4dc" aria-label="米白"></button>
+        </div>
+        <button id="rotate" class="icon-button" aria-label="切换自动旋转">360°</button>
+        <button id="reset" class="icon-button" aria-label="重置视角">↺</button>
+      </div>
+    </section>
+    <div class="disclaimer">3D 示范分身 · 视觉效果不代表真实尺码与合体度</div>
+  </main>
+  <script type="module" src="./viewer.js"></script>
+</body>
+</html>

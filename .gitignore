@@ -1,0 +1,33 @@
+# Local toolchains
+.tools/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Build outputs
+build/
+out/
+dist/
+.gradle/
+.dart_tool/
+.flutter-plugins*
+.packages
+.pub-cache/
+node_modules/
+
+# IDE and OS
+.idea/
+.vscode/
+.DS_Store
+
+# Local runtime data and logs
+data/
+*.log
+*.pid
+
+# Mobile generated files
+apps/mobile/android/.gradle/
+apps/mobile/ios/Pods/
+apps/mobile/ios/.symlinks/
